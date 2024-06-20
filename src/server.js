@@ -5,9 +5,9 @@ import express from "express";
 
 const app = express();
 
-app.use(express.json());
+const PORT = process.env.PORT;
 
-const PORT = process.env.PORT || 4002;
+app.use(express.json());
 
 app.get('/api/healty', (req, res) => {
     res.status(200).json(
